@@ -74,5 +74,4 @@ public class LogicaClasificacionTest {
         esperado = new LinkedList<>();
         assertEquals(esperado, logica.intercalarColas(cola1, cola2));
     }
-
 }

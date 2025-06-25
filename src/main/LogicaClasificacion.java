@@ -15,8 +15,12 @@ public class LogicaClasificacion {
      * @return nueva cola con los nombres en orden invertido
      */
     public Queue<String> invertirColaNombres(Queue<String> cola) {
-
-        return new LinkedList<>(Arrays.asList()); // Simulación de resultado
+        Queue<String> colanueva = new LinkedList<>();
+        while (cola.isEmpty()==true) {
+           String ultimoElemento = cola.remove();
+            colanueva.add(ultimoElemento);
+        }
+        return colanueva; // Simulación de resultado
     }
 
     /**
@@ -35,7 +39,19 @@ public class LogicaClasificacion {
      * @return nueva cola con elementos intercalados
      */
     public Queue<Integer> intercalarColas(Queue<Integer> cola1, Queue<Integer> cola2) {
-        return new LinkedList<>(Arrays.asList()); // Simulación de resultado
+        Queue<Integer> colaIntercalada = new LinkedList<>();
+        while (cola1.isEmpty()&&cola2.isEmpty()) {
+            if(cola1.isEmpty()!=true){
+                int ultimoValor = cola1.remove();
+                colaIntercalada.add(ultimoValor);
+            } 
+            if(cola2.isEmpty()!=true){
+                int ultimoValor = cola2.remove();
+                colaIntercalada.add(ultimoValor);
+            }
+            
+        }
+        return colaIntercalada; // Simulación de resultado
     }
 
 }
